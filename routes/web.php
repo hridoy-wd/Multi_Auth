@@ -14,15 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /*..............Admin Route..............*/
-
 Route::prefix('admin')->group(function(){
     Route::get('/login', [AdminController::class, 'index'])->name('login_form');
     Route::get('/login/owner', [AdminController::class, 'login'])->name('admin.login');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('login_form');
 
-})
-
-
+});
 /*............Admin Route End.............*/
 
 Route::get('/', function () {
